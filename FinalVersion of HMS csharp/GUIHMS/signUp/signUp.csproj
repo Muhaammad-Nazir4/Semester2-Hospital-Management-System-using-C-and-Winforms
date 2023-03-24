@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FB13B79-16B8-470C-9EB9-E198F8B42C19}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>signUp</RootNamespace>
+    <AssemblyName>signUp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addPatientForm.Designer.cs">
+      <DependentUpon>addPatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenuForm.Designer.cs">
+      <DependentUpon>AdminMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppointmentsForm.Designer.cs">
+      <DependentUpon>AppointmentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppointmentViewForm.Designer.cs">
+      <DependentUpon>AppointmentViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="birthDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="birthDataForm.Designer.cs">
+      <DependentUpon>birthDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BirthDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BirthDeleteForm.Designer.cs">
+      <DependentUpon>BirthDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="birthViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="birthViewForm.Designer.cs">
+      <DependentUpon>birthViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BL\appointment.cs" />
+    <Compile Include="BL\birthBL.cs" />
+    <Compile Include="BL\deathBL.cs" />
+    <Compile Include="BL\feedback.cs" />
+    <Compile Include="BL\medicalBL.cs" />
+    <Compile Include="BL\patientBL.cs" />
+    <Compile Include="BL\personalBL.cs" />
+    <Compile Include="CredentialBL.cs" />
+    <Compile Include="CredentialDL.cs" />
+    <Compile Include="deathdataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deathdataForm.Designer.cs">
+      <DependentUpon>deathdataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deathDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deathDeleteForm.Designer.cs">
+      <DependentUpon>deathDeleteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeletePatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletePatientForm.Designer.cs">
+      <DependentUpon>DeletePatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\appointmentDL.cs" />
+    <Compile Include="DL\birthDL.cs" />
+    <Compile Include="DL\deathDL.cs" />
+    <Compile Include="DL\feedbackDL.cs" />
+    <Compile Include="DL\medicalDL.cs" />
+    <Compile Include="DL\patientDL.cs" />
+    <Compile Include="DL\personalDL.cs" />
+    <Compile Include="DoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorForm.Designer.cs">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPatientForm.Designer.cs">
+      <DependentUpon>EditPatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="feedBackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedBackForm.Designer.cs">
+      <DependentUpon>feedBackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="feedbackViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedbackViewForm.Designer.cs">
+      <DependentUpon>feedbackViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstForm.Designer.cs">
+      <DependentUpon>FirstForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="medicalDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="medicalDetailForm.Designer.cs">
+      <DependentUpon>medicalDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="medicalViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="medicalViewForm.Designer.cs">
+      <DependentUpon>medicalViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientMenuForm.Designer.cs">
+      <DependentUpon>PatientMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientViewForm.Designer.cs">
+      <DependentUpon>PatientViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalDetailForm.Designer.cs">
+      <DependentUpon>PersonalDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalViewForm.Designer.cs">
+      <DependentUpon>PersonalViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\DataSources\deathViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\DataSources\deathViewForm.Designer.cs">
+      <DependentUpon>deathViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistMedicalView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistMedicalView.Designer.cs">
+      <DependentUpon>ReceptionistMedicalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceptionistViewMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistViewMenu.Designer.cs">
+      <DependentUpon>ReceptionistViewMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecommendationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecommendationForm.Designer.cs">
+      <DependentUpon>RecommendationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="roomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roomForm.Designer.cs">
+      <DependentUpon>roomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewPdetailInReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewPdetailInReceptionist.Designer.cs">
+      <DependentUpon>viewPdetailInReceptionist.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addPatientForm.resx">
+      <DependentUpon>addPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenuForm.resx">
+      <DependentUpon>AdminMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppointmentsForm.resx">
+      <DependentUpon>AppointmentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppointmentViewForm.resx">
+      <DependentUpon>AppointmentViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="birthDataForm.resx">
+      <DependentUpon>birthDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BirthDeleteForm.resx">
+      <DependentUpon>BirthDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="birthViewForm.resx">
+      <DependentUpon>birthViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deathdataForm.resx">
+      <DependentUpon>deathdataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deathDeleteForm.resx">
+      <DependentUpon>deathDeleteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletePatientForm.resx">
+      <DependentUpon>DeletePatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorForm.resx">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPatientForm.resx">
+      <DependentUpon>EditPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedBackForm.resx">
+      <DependentUpon>feedBackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedbackViewForm.resx">
+      <DependentUpon>feedbackViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstForm.resx">
+      <DependentUpon>FirstForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="medicalDetailForm.resx">
+      <DependentUpon>medicalDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="medicalViewForm.resx">
+      <DependentUpon>medicalViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientMenuForm.resx">
+      <DependentUpon>PatientMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientViewForm.resx">
+      <DependentUpon>PatientViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalDetailForm.resx">
+      <DependentUpon>PersonalDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalViewForm.resx">
+      <DependentUpon>PersonalViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\DataSources\deathViewForm.resx">
+      <DependentUpon>deathViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReceptionistMedicalView.resx">
+      <DependentUpon>ReceptionistMedicalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistViewMenu.resx">
+      <DependentUpon>ReceptionistViewMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecommendationForm.resx">
+      <DependentUpon>RecommendationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomForm.resx">
+      <DependentUpon>roomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewPdetailInReceptionist.resx">
+      <DependentUpon>viewPdetailInReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\addPatientForm.datasource" />
+    <None Include="Properties\DataSources\AdminMenuForm.datasource" />
+    <None Include="Properties\DataSources\AppointmentsForm.datasource" />
+    <None Include="Properties\DataSources\AppointmentViewForm.datasource" />
+    <None Include="Properties\DataSources\birthDataForm.datasource" />
+    <None Include="Properties\DataSources\BirthDeleteForm.datasource" />
+    <None Include="Properties\DataSources\birthViewForm.datasource" />
+    <None Include="Properties\DataSources\CredentialDL.datasource" />
+    <None Include="Properties\DataSources\deathdataForm.datasource" />
+    <None Include="Properties\DataSources\deathDeleteForm.datasource" />
+    <None Include="Properties\DataSources\DeletePatientForm.datasource" />
+    <None Include="Properties\DataSources\DoctorForm.datasource" />
+    <None Include="Properties\DataSources\feedBackForm.datasource" />
+    <None Include="Properties\DataSources\feedbackViewForm.datasource" />
+    <None Include="Properties\DataSources\FirstForm.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\Form2.datasource" />
+    <None Include="Properties\DataSources\medicalDetailForm.datasource" />
+    <None Include="Properties\DataSources\medicalViewForm.datasource" />
+    <None Include="Properties\DataSources\MyUser.datasource" />
+    <None Include="Properties\DataSources\PatientMenuForm.datasource" />
+    <None Include="Properties\DataSources\PatientViewForm.datasource" />
+    <None Include="Properties\DataSources\PersonalDetailForm.datasource" />
+    <None Include="Properties\DataSources\PersonalViewForm.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\ReceptionistMedicalView.datasource" />
+    <None Include="Properties\DataSources\ReceptionistViewMenu.datasource" />
+    <None Include="Properties\DataSources\RecommendationForm.datasource" />
+    <None Include="Properties\DataSources\roomForm.datasource" />
+    <None Include="Properties\DataSources\signUp.BL.appointment.datasource" />
+    <None Include="Properties\DataSources\signUp.BL.birthBL.datasource" />
+    <None Include="Properties\DataSources\signUp.BL.deathBL.datasource" />
+    <None Include="Properties\DataSources\signUp.BL.feedback.datasource" />
+    <None Include="Properties\DataSources\signUp.BL.medicalBL.datasource" />
+    <None Include="Properties\DataSources\signUp.BL.patientBL.datasource" />
+    <None Include="Properties\DataSources\signUp.BL.personalBL.datasource" />
+    <None Include="Properties\DataSources\signUp.DL.appointmentDL.datasource" />
+    <None Include="Properties\DataSources\signUp.DL.birthDL.datasource" />
+    <None Include="Properties\DataSources\signUp.DL.deathDL.datasource" />
+    <None Include="Properties\DataSources\signUp.DL.feedbackDL.datasource" />
+    <None Include="Properties\DataSources\signUp.DL.medicalDL.datasource" />
+    <None Include="Properties\DataSources\signUp.DL.patientDL.datasource" />
+    <None Include="Properties\DataSources\signUp.DL.personalDL.datasource" />
+    <None Include="Properties\DataSources\signUp.Properties.DataSources.deathViewForm.datasource" />
+    <None Include="Properties\DataSources\signUp.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\signUp.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\viewPdetailInReceptionist.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

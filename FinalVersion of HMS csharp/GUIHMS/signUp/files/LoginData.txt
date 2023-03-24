@@ -1,0 +1,5 @@
+ali,123,admin
+zain,123,patient
+umer,123,patient
+nazir,123,receptionist
+hassan,123,patient
